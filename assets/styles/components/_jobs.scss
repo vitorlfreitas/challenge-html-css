@@ -1,0 +1,79 @@
+@import '../abstract/base';
+
+$component-name: 'jobs';
+
+.#{$component-name} {
+    width: 80%;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    &__type {
+        align-self: flex-start;
+        justify-content: center;
+        margin: 32px;
+    }
+
+    &__info {
+        border: $border-jobs;
+        border-radius: 16px;
+        box-shadow: $shadow5;
+        padding: 24px;
+        text-align: left;
+        margin-bottom: 24px;
+
+        &:hover {
+            cursor: pointer;
+            background:$hover-jobs;
+            transition: all 150ms ease-in;
+            border: $hover-jobs-border;
+        }
+
+        &--title {
+            color: $title-color;
+            font-size: $text-size * 1.125;
+            align-self: flex-start;
+            font-weight: 500;
+            margin-bottom: 32px;
+        }
+
+        &--description {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 24px;
+
+            & .contract,
+            .salary {
+                color: $text-color;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    .#{$component-name} {
+        width: 90%;
+
+        &__type {
+            margin: 32px 0;
+            font-size: $text-size * 1.250;
+        }
+
+        &__info {
+            padding: 12px;
+
+            &--description {
+
+                gap: 20px;
+
+                & .contract, .salary {
+
+                    font-size: $text-size * 0.875;
+                }
+            }
+        }
+    }
+}

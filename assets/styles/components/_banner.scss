@@ -1,0 +1,61 @@
+@import '../abstract/base';
+
+$component-name: "banner";
+
+.#{$component-name} {
+
+    text-align: center;
+    padding: 96px 22%;
+
+    &__subtitle {
+
+        color: $destaque;
+        font-size: $text-size;
+        font-weight: 600;
+        margin-bottom: 24px;
+
+    }
+
+    &__title {
+
+        font-size: $text-size * 3;
+        font-weight: 600;
+        margin-bottom: 24px;
+    }
+
+    &__text {
+
+        color: $text-color;
+        font-size: $text-size * 1.2;
+        font-weight: 400;
+    }
+}
+@media (max-width: 1100px) {
+    .#{$component-name} {
+        padding: 45px 10%;
+    }
+}
+@media (max-width: 620px) {
+    .#{$component-name} {
+
+        &__title {
+            font-size: $text-size * 1.875;
+        }
+        &__text {
+            font-size: $text-size;
+        }
+    }
+}
+@media (max-width: 420px) {
+    .#{$component-name} {
+
+        padding: 40px 6%;
+
+        &__title {
+            font-size: $text-size * 2.2;
+        }
+        &__text {
+            font-size: $text-size;
+        }
+    }
+}

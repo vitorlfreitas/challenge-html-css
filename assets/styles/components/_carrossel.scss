@@ -1,0 +1,21 @@
+@import '../abstract/base';
+
+$component-name: 'carrossel';
+.#{$component-name} {
+    display: none;
+}
+@media (max-width: 650px) {
+    .#{$component-name} {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2% 10%;
+        background-color: #eee;
+        margin-bottom: 94px;
+        box-shadow: $shadow4;
+
+        & .swiper {
+            padding: 10px 0;
+        }
+    }
+}

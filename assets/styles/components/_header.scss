@@ -1,0 +1,180 @@
+@import '../abstract/base';
+$component-name: "header";
+
+.#{$component-name} {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        &__logo--title {
+            font-size: $text-size * 1.125;
+            color: $logo-color;
+            font-weight: 500;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        margin-right: 300px;
+
+        &--menu {
+            display: none;
+        }
+
+        &--menuburger {
+            display: none;
+        }
+
+        &--submenu {
+            display: flex;
+            gap: 32px;
+        }
+    }
+
+    &__nav--links,
+    &__cadastre--login {
+        color: $text-color;
+        font-size: $text-size;
+        font-weight: 500;
+
+    }
+
+    &__cadastre {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        &--button {
+            padding: 10px 18px;
+            background-color: $destaque;
+            border: 1px solid $destaque;
+            border-radius: 8px;
+            box-shadow: $shadow1;
+
+            color: $white;
+            font-weight: 500;
+
+            @include hover-destaque;
+        }
+    }
+}
+
+@media (min-width: 990px) {
+    .#{$component-name} {
+
+        &__nav--links,
+        &__cadastre--login {
+            
+            cursor: pointer;
+            @include hover-links;
+        }
+
+    }
+}
+
+@media (max-width: 1224px) {
+    .#{$component-name} {
+        &__nav {
+            margin-right: 100px;
+        }
+    }
+}
+
+@media (max-width: 990px) {
+
+    .#{$component-name} {
+        padding: 0px 10px 0px 0px;
+
+        &__nav {
+            order: -1;
+            position: relative;
+
+
+            &--menu:checked~&--submenu {
+                transform: translateX(2%) rotateX(0deg);
+                transition: all 180ms ease-in-out;
+            }
+
+
+            &--menuburger {
+                display: block;
+
+            }
+
+            &--submenu {
+                position: absolute;
+                top: 100%;
+                flex-direction: column;
+                gap: 0;
+                width: 150px;
+                background-color: $bg-menu-hover;
+                border-radius: 8px;
+                box-shadow: $shadow2;
+                transform: translateX(-50%) rotateX(-90deg);
+                transform-origin: top center;
+
+                & li {
+                    padding: 10px;
+
+                    &:hover {
+                        background-color: $menu-bg-hover;
+
+                    }
+
+                    & a {
+                        color: white;
+                        font-size: $text-size * 1.5;
+                    }
+                }
+
+            }
+        }
+
+        &__cadastre--login,
+        &__cadastre--button {
+            font-size: $text-size * 1.5;
+            margin-top: 0.5rem;
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    .#{$component-name} {
+        &__logo--title {
+            font-size: $text-size * 1.2;
+        }
+
+        &__nav {
+            margin-right: 0px;
+        }
+
+        &__cadastre--login,
+        &__cadastre--button {
+            font-size: $text-size * 1.1;
+            margin-top: 0rem;
+        }
+
+        &__cadastre--button {
+            padding: 5px 10px;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .#{$component-name} {
+
+        &__logo {
+            margin-right: 1rem;
+        }
+
+        &__cadastre {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,83 @@
+@import '../abstract/base';
+
+$component-name: 'depoimentos';
+
+.#{$component-name} {
+    padding: 64px;
+    background-color: $depoimentos-bg;
+    text-align: center;
+    margin: 96px 0px;
+
+    &__subtitle {
+        color: $destaque;
+        font-size: $text-size * 0.875;
+        font-weight: 600;
+        margin: 16px 0px;
+    }
+    &__title {
+        color: $title-color;
+        font-size: $text-size * 2.25;
+        font-weight: 500;
+        margin: 16px;
+    }
+    &__avatar {
+        box-shadow: $shadow-avatar;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        margin: 16px;
+
+        &:hover {
+            box-shadow: $hover-avatar;
+            transition: 125ms ease-in;
+        }
+    }
+    &__nome {
+        color: $title-color;
+        font-size: $text-size;
+        font-weight: 500;
+    }
+    &__cargo {
+        color: $text-color;
+        font-size: $text-size * 0.875;
+        font-weight: 400;
+        margin-top: 4px;
+    }
+}
+@media (max-width: 620px) {
+    .#{$component-name} {
+        margin: 0;
+        padding: 30px 10px;
+
+        &__subtitle {
+            font-size: $text-size;
+        }
+        &__title {
+            font-size: $text-size * 1.5;
+        }
+        &__nome {
+            font-size: $text-size * 1.125;
+        }
+    }
+}
+@media (max-width: 420px) {
+    .#{$component-name} {
+        margin: 0;
+        padding: 20px 10px;
+
+        &__subtitle {
+            font-size: $text-size * 0.875;
+            margin: 20px 0;
+        }
+        &__title {
+            font-size: $text-size * 1.2;
+        }
+        &__avatar {
+            width: 70px;
+            height: 70px;
+        }
+        &__nome {
+            font-size: $text-size;
+        }
+    }
+}

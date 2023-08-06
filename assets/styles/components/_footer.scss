@@ -1,0 +1,134 @@
+@import '../abstract/base';
+
+$component-name: 'footer';
+
+.#{$component-name} {
+    background-color: $bg-footer;
+    padding: 96px;
+    text-align: center;
+
+    &__title {
+        @include title;
+        font-size: $text-size * 2.25;
+    }
+
+    &__text {
+        @include text;
+        font-size: $text-size * 1.25;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    &__form {
+        @include flex-center;
+        gap: 30px;
+
+        &--email {
+            width: 360px;
+            border: 1px solid #D0D5DD;
+            border-radius: 8px;
+            background: $white;
+            box-shadow: $shadow1;
+            padding: 12px 16px;
+            box-sizing: border-box;
+
+            &:hover,
+            &:focus {
+                outline: none;
+                border: 1px solid #585b5f;
+                transition-duration: 125ms;
+                @include text;
+            }
+
+            &::placeholder {
+                font-family: $font;
+                font-size: $text-size;
+                @include text;
+            }
+
+        }
+
+        &--button {
+            padding: 12px 20px;
+            border: 1px solid $destaque;
+            border-radius: 8px;
+            background-color: $destaque;
+            box-shadow: $shadow1;
+
+            color: $white;
+            font-weight: 500;
+
+            @include hover-destaque;
+
+        }
+    }
+
+    &__copyright {
+        color: $copyright-color;
+        margin-top: 32px;
+    }
+}
+
+@media (max-width: 620px) {
+    .#{$component-name} {
+        padding: 30px 10px;
+
+        &__title {
+
+            font-size: $text-size * 1.75;
+        }
+
+        &__text {
+
+            font-size: $text-size;
+        }
+
+    }
+}
+
+@media (max-width: 420px) {
+    .#{$component-name} {
+        padding: 30px 10px;
+
+
+        &__title {
+
+            font-size: calc($text-size * 1.5);
+        }
+
+        &__text {
+
+            font-size: $text-size;
+        }
+
+        &__form {
+            gap: 18px;
+
+            &--email {
+                width: 200px;
+            }
+        }
+    }
+}
+
+@media (max-width: 330px) {
+    .#{$component-name} {
+
+        &__form {
+
+            gap: 12px;
+
+            &--email {
+                width: 200px;
+                padding: 8px 12px;
+
+                &::placeholder {
+                    font-size: calc($text-size * 0.75);
+                }
+            }
+            &--button {
+                padding: 8px 12px;
+            }
+        }
+    }
+}

@@ -1,0 +1,122 @@
+@import '../abstract/base';
+
+$component-name: 'info';
+
+.#{$component-name} {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+    padding: 2% 5%;
+
+    &__card {
+
+        &--number {
+            color: $destaque;
+            font-size: $text-size * 3.75;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        &--title {
+            color: $title-color;
+            font-size: $text-size * 1.125;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        &--text {
+            color: $text-color;
+            font-size: $text-size;
+            font-weight: 400;
+        }
+    }
+
+}
+
+@media (max-width: 840px) {
+    .#{$component-name} {
+        &__card {
+            &--number {
+                font-size: $text-size * 3;
+                margin-bottom: 5px;
+            }
+
+            &--title {
+                font-size: $text-size * 1;
+                margin-bottom: 5px;
+            }
+
+            &--text {
+                font-size: $text-size / 1.1;
+            }
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .#{$component-name} {
+        display: none;
+
+        &__card {
+            background-color: $section-bg;
+            box-shadow: $shadow3;
+            border-radius: 8px;
+            width: 330px;
+            padding: 2% 2% 5% 2%;
+
+            &--number {
+                font-size: $text-size * 4;
+                margin-bottom: 5px;
+            }
+
+            &--title {
+                font-size: $text-size * 1.8;
+                margin-bottom: 5px;
+            }
+
+            &--text {
+                font-size: $text-size * 1.4;
+            }
+        }
+    }
+
+}
+@media (max-width: 580px) {
+    .#{$component-name} {
+
+        &__card {
+            width: 250px;
+            margin-bottom: 10px;
+        }
+    }
+
+}
+@media (max-width: 420px) {
+    .#{$component-name} {
+
+        &__card {
+            background-color: $section-bg;
+            box-shadow: $shadow3;
+            border-radius: 8px;
+            width: 150px;
+            padding: 2% 3%;
+            margin-bottom: 10px;
+
+            &--number {
+                font-size: $text-size * 2;
+                margin-bottom: 5px;
+            }
+
+            &--title {
+                font-size: $text-size;
+                margin-bottom: 5px;
+            }
+
+            &--text {
+                font-size: $text-size * 0.8;
+            }
+        }
+    }
+
+}
