@@ -191,7 +191,8 @@
                 Veja o que nossos colaboradores falam sobre nós
             </h3>
             <h2 class="depoimentos__title">
-                OptimusTech se importa com a saúde dos seus colaboradores e sempre procura nos dar todo tipo de auxílio possível.
+                OptimusTech se importa com a saúde dos seus colaboradores e sempre procura nos dar todo tipo de auxílio
+                possível.
             </h2>
             <img class="depoimentos__avatar" src="assets/avatar.svg" alt="Imagem de perfil de uma desenvolvedora">
             <h4 class="depoimentos__nome">
@@ -211,7 +212,8 @@
         </p>
         <form action="#" class="footer__form" autocomplete="on">
 
-            <input class="footer__form--email" type="email" name="email" id="email" autocomplete="email" required maxlength="30" placeholder="Digite o seu email aqui">
+            <input class="footer__form--email" type="email" name="email" id="email" autocomplete="email" required
+                maxlength="30" placeholder="Digite o seu email aqui">
 
             <input class="footer__form--button" type="submit" value="Cadastrar">
         </form>
@@ -223,14 +225,24 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper('.swiper', {
-            speed: 400,
-            spaceBetween: 100,
-            slidesPerView: 1.5,
+            effect: "coverflow",
+            speed: 500,
+            spaceBetween: 70,
+            slidesPerView: 1.9,
+            centeredSlides: true,
             autoplay: {
                 delay: 2500,
                 disableOnInteraction: false,
             },
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
         });
+
     </script>
 </body>
 

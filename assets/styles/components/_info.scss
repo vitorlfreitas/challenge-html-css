@@ -62,8 +62,8 @@ $component-name: 'info';
             background-color: $section-bg;
             box-shadow: $shadow3;
             border-radius: 8px;
-            width: 330px;
-            padding: 2% 2% 5% 2%;
+            width: 300px;
+            padding: 2% 2% 2% 2%;
 
             &--number {
                 font-size: $text-size * 4;
@@ -86,8 +86,8 @@ $component-name: 'info';
     .#{$component-name} {
 
         &__card {
-            width: 250px;
-            margin-bottom: 10px;
+            width: 300px;
+            margin-bottom: 0px;
         }
     }
 
@@ -99,7 +99,7 @@ $component-name: 'info';
             background-color: $section-bg;
             box-shadow: $shadow3;
             border-radius: 8px;
-            width: 150px;
+            width: 250px;
             padding: 2% 3%;
             margin-bottom: 10px;
 
