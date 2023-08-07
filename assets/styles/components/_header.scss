@@ -128,7 +128,7 @@ $component-name: "header";
                     }
 
                     & a {
-                        color: white;
+                        color: $title-color;
                         font-size: $text-size * 1.5;
                     }
                 }
