@@ -45,6 +45,11 @@ $component-name: "header";
 
     }
 
+    &__cadastre--login {
+        cursor: pointer;
+        @include hover-links;
+    }
+
     &__cadastre {
         display: flex;
         align-items: center;
@@ -68,9 +73,8 @@ $component-name: "header";
 @media (min-width: 990px) {
     .#{$component-name} {
 
-        &__nav--links,
-        &__cadastre--login {
-            
+        &__nav--links {
+
             cursor: pointer;
             @include hover-links;
         }
@@ -128,7 +132,7 @@ $component-name: "header";
                     }
 
                     & a {
-                        color: white;
+                        color: $title-color;
                         font-size: $text-size * 1.5;
                     }
                 }
